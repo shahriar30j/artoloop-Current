@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+<RelativeLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.example.itshahriar.test.Main2Activity">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
     <LinearLayout
         android:id="@+id/topnevigat"
         android:layout_width="match_parent"
-        android:layout_height="550dp"
-        android:layout_weight="1"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+        android:layout_alignParentStart="true"
+        >
 
         <Button
             android:id="@+id/BookService"
@@ -27,16 +26,13 @@
     <ScrollView
         android:id="@+id/midscroll"
         android:layout_width="match_parent"
-        android:layout_height="900dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="220dp"
-        android:layout_weight="1">
+        android:layout_height="450dp"
+        android:layout_below="@id/topnevigat">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="top"
+
             android:orientation="vertical">
 
             <LinearLayout
@@ -149,20 +145,13 @@
 
     </ScrollView>
 
-    <LinearLayout
-        android:id="@+id/bottom"
+    <Button
+        android:id="@+id/button"
         android:layout_width="match_parent"
-        android:layout_height="350dp"
-        android:layout_weight="1"
-        android:orientation="vertical">
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Button" />
-    </LinearLayout>
+        android:layout_height="wrap_content"
+        android:layout_below="@id/midscroll"
+        android:layout_alignParentBottom="true"
+        android:text="More" />
 
 
-</LinearLayout>
-
+</RelativeLayout>
